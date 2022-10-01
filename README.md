@@ -1,1 +1,1 @@
-##  Collection of Golang algo
+#  Collection of Golang algo
