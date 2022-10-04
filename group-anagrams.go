@@ -10,7 +10,7 @@ type Ganagram struct {
 	strs []string
 }
 
-func (a *Ganagram) solve() {
+func (a *Ganagram) solve() map[string][]string {
 	m := make(map[string][]string)
 	for _, val := range a.strs {
 		ss := strings.Split(val, "")
@@ -19,11 +19,11 @@ func (a *Ganagram) solve() {
 		m[str] = append(m[str], val)
 
 	}
-	fmt.Println(m)
+	return m
 }
 func main() {
 	data := []string{"eat", "tea", "tan", "ate", "nat", "bat"}
 	s := Ganagram{strs: data}
-	s.solve()
+	fmt.Println(s.solve())
 
 }
