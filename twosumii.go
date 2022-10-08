@@ -15,19 +15,15 @@ func (t *Twosum2) solve() []int {
 	for {
 		if t.numbers[left]+t.numbers[right] < t.target {
 			left++
-		}
-		if t.numbers[right]+t.numbers[left] > t.target {
+		} else if t.numbers[right]+t.numbers[left] > t.target {
 			right--
-		} else if t.numbers[left]+t.numbers[right] == t.target {
-			data = append(data, left, right)
-			break
 		} else {
-			break
+			data = append(data, left, right)
 		}
-	}
-	return data
-}
 
+		return data
+	}
+}
 func main() {
 	input := []int{-1, 0}
 	tgt := -1
