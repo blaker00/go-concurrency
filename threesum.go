@@ -9,7 +9,7 @@ import (
 
 func threesum(input []int) [][]int {
 	//sanity check
-	if len(input) < 2 {
+	if len(input) < 3 {
 		fmt.Println("invalid input")
 		os.Exit(1)
 	}
