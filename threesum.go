@@ -8,6 +8,11 @@ import (
 )
 
 func threesum(input []int) [][]int {
+	//sanity check
+	if len(input) < 2 {
+		fmt.Println("invalid input")
+		os.Exit(1)
+	}
 	//sort
 	data := input
 	sort.Ints(data)
@@ -16,10 +21,6 @@ func threesum(input []int) [][]int {
 	left := 0
 	right := len(data) - 1
 	var final [][]int
-	if len(input) < 2 {
-		fmt.Println("invalid input")
-		os.Exit(1)
-	}
 	for left < right {
 		if data[left]+data[left+1]+data[right] < 0 {
 			left++
