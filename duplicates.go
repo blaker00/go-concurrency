@@ -7,7 +7,7 @@ import (
 )
 
 func duplicates(input []int) {
-	if len(input) < 3 {
+	if len(input) < 2 {
 		fmt.Println("invalid length of numbers")
 		os.Exit(1)
 	}
